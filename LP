@@ -1,0 +1,49 @@
+fun readdna(filename) =
+    let val file = TextIO.openIn filename
+        val dna = TextIO.inputAll file
+        val _ = TextIO.closeIn file
+    in String.tokens (fn c => c = #"\n") dna
+    end;
+    
+val arquivo = [readdna("dna.txt")];
+
+fun identifica e[x1,x2,x3] = 
+if x1 = t then 
+	if x2 = t then 
+		if (x3 = t || x3 = c) then F
+		else then Leo
+	else if x2 = c then S
+	else if x2 = a then 
+		if (x3 = t || x3 = c) then T
+		else then Stop
+	else if(x3=a) then Stop
+	else if (x3=g) then T
+	else then C
+else if (x1 =c) then 
+	if(x2=t) then L
+	else if (x2=c) then P
+	else if (x2 = a) then
+		if(x3=t || c) then H
+		else then G
+	else then A
+else if (x1 = a) then 
+	if(x2=g) then
+		if (x3=g || x3=a) then A
+		else then S
+	else if(x2=a) then 
+		if(x3=g || x3=a) then L
+		else then A
+	else if (x2=t) then
+		if (x3=g) then M
+		else then I
+	else then T
+else then 
+	if (x2=a) then
+		if(x3=a || x3=g) then Ga
+		else then Aa
+	else if (x2= g) then G
+	else if(x2=c) then A
+	else then V
+		
+		
+		
