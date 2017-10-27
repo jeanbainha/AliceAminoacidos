@@ -45,6 +45,10 @@ else then
 	else if (x2= g) then G
 	else if(x2=c) then A
 	else then V
-		
-		
+	
+fun writeBases(filename) =
+    let val file = TextIO.openOut(filename)
+        val _ = TextIO.output(file, letodo(arquivo))
+    in TextIO.closeOut(file)
+    end
 		
